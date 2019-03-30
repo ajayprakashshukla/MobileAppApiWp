@@ -40,10 +40,6 @@ add_action('rest_api_init', function () {
         'callback' => 'GetUserImage',
     ));
 
-    register_rest_route('mobileapi/v1', '/DeleteUserImage', array(
-        'methods' => 'POST',
-        'callback' => 'DeleteUserImage',
-    ));
 
     register_rest_route('mobileapi/v1', '/validate_token', array(
         'methods' => 'POST',
@@ -57,33 +53,6 @@ add_action('rest_api_init', function () {
 
 });
 
-function DeleteUserImage($request)
-{
-    $param = $request->get_params();
-    $token = $param['token'];
-    $image = $param['image'];
-    $user_id = GetMobileAPIUserByIdToken($token);
-    $response = array("status" => "ok", "msg" => "deleted successfully.");
-    if (!$user_id) {
-        $response['status'] = "error";
-        $response['msg'] = "user not found";
-        return new WP_REST_Response($response, 403);
-    }
-
-    if (count($image) > 0 && $image['id'] != '' && $image['author'] == $user_id && get_post_status($image['id'])) {
-        wp_delete_post($image['id'], true);
-
-        if ($image['featured_media'] != '') {
-            wp_delete_attachment($image['featured_media'], true);
-        }
-    } else {
-        $response['status'] = "error";
-        $response['msg'] = "image not found";
-        return new WP_REST_Response($response, 403);
-    }
-    return new WP_REST_Response($response, 200);
-
-}
 
 function facebook_login($request)
 {
