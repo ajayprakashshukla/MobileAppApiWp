@@ -1,8 +1,9 @@
-## This is Wordpress Plugin to use for Mobile app Api .##
+# This is Wordpress Plugin to use for Mobile app Api .
 
-#Api Enpoint Listed Below :
+##Api Enpoint Listed Below :
 
- 1) Login using JWT auth Plugin , Need to Install JWT Auth Plugin for that https://wordpress.org/plugins/jwt-authentication-for-wp-rest-api/
+ 1) Login using JWT auth Plugin , Need to Install JWT Auth Plugin for that </br>
+ https://wordpress.org/plugins/jwt-authentication-for-wp-rest-api/
  
  2) Registration 
   ENDPOINT : WP_URL/wp-json/mobileapi/v1/register
