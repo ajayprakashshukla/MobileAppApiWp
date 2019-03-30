@@ -10,7 +10,7 @@
  3) Forgot Password 
    ENDPOINT : WP_URL/wp-json/mobileapi/v1/retrieve_password
    
- 4) Get User Profile image with wp user Avatar plugin 
+ 4) Get User Profile image with wp user Avatar plugin https://wordpress.org/plugins/wp-user-avatar/ 
   ENDPOINT : WP_URL/wp-json/mobileapi/v1/GetUserImage
   
  5) Login with Facebook
