@@ -2,7 +2,7 @@
 
 Please find the API end points below : </br>
 
-### 1) Authentication : </br>
+### 1) Authentication  </br>
    As an intial step you need to install JWT Auth Plugin in your wordpress setup. Please find the plugin link below : </br>
     https://wordpress.org/plugins/jwt-authentication-for-wp-rest-api/</br>
  
