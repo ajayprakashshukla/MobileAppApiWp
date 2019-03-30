@@ -1,4 +1,4 @@
-#Wordpress plugin for MobileApp API's#
+# Wordpress plugin for MobileApp API's
 
 Please find the API end points below : </br>
 
