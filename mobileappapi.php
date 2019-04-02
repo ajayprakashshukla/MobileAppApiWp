@@ -374,7 +374,7 @@ function mobileapi_jwt_auth_token_before_dispatch($data, $user)
         $role = 'author';
     }
 
-    $profile = GetRecentProfile($user->ID);
+
 
     $data['role'] = $role;
     $first_name = get_user_meta($user->ID, "first_name", true);
